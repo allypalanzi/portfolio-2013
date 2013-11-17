@@ -33,9 +33,8 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title %></title>
     
-    <%= stylesheet_link_tag "normalize", "styles" %>
-    <%= javascript_include_tag  "all" %>
-  </head>
+    <link href="stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css" />  </head>
   
   <body class="<%= page_classes %>">
     <%= yield %>
