@@ -1,0 +1,84 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="js/functions.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {     
+        $.jribbble.getShotsByPlayerId('allypalanzi', function (playerShots) {
+            var html = [];
+        
+            $.each(playerShots.shots, function (i, shot) {
+                html.push('<li><a target="_blank" href="' + shot.url + '">');
+                html.push('<img class="thumbs" src="' + shot.image_teaser_url + '" ');
+                html.push('alt="' + shot.title + '"></a></li>');
+            });
+            html.push('<div class="clear"></div>');
+
+            $('#dribbble').html(html.join(''));
+        }, {page: 1, per_page: 8});
+    });
+
+    $(function(){
+        $('.submit').click(function(e){
+
+            // Stop the form actually posting
+            e.preventDefault();
+
+            // Send the request
+            $.post('contact.php', {
+                name: $('#name').val(),
+                email: $('#email').val(),
+                subject: $('#subject').val(),
+                message: $('#message').val(),
+
+            }, function(d){
+                console.log(d);
+                // Here we handle the response from the script
+                // We are just going to alert the result for now
+                alert(d);
+                
+            });
+        });
+    });
+
+
+    
+    function jsonFlickrFeed(json) {
+        // Assign to a global variable
+        window.jsonFromFlickr = json;
+    }
+    function makePhoto(photo) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = photo.link;
+        a.target = "_blank";
+        var img = document.createElement('img');
+        img.src = photo.media.m.replace('_m', '_n');
+        img.title = photo.title;
+        img.alt = photo.alt;
+        a.appendChild(img);
+        li.appendChild(a);
+        return li;
+    }
+
+
+    function showPhotos() {
+        if (!jsonFromFlickr) {
+        alert('Flickr photos failed to load');
+    }
+    // 'Empty' the ul by removing all of its children
+    var ul = document.getElementById('myPhotos');
+    while (ul.hasChildNodes()) {
+        ul.removeChild(ul.firstChild);
+    }
+    // Loop over the photos and display them all
+    for (var i = 0; i <= 7; i++) {
+        photo = jsonFromFlickr.items[i];
+        ul.appendChild(makePhoto(photo));
+    }
+    }
+
+    window.onload = showPhotos;
+
+</script>
+<script type="text/javascript" src="http://api.flickr.com/services/feeds/photos_public.gne?id=34712236@N03&lang=en-us&format=json"></script>
