@@ -32,7 +32,7 @@
 // #Fonts
 // ==================================================
 
-@import url(http://fonts.googleapis.com/css?family=Arvo:400,400italic|Oswald:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Oswald:400,300);
 
 @font-face  {
     font-family: 'socialicoregular';
@@ -59,7 +59,7 @@
         width: 100%;
         min-width: 320px;
         background: #f4f4f4;
-        font-family: 'Arvo',serif;
+        font-family: 'Open Sans',serif;
         font-size: 15px;
     }
 
@@ -175,7 +175,7 @@ to  {opacity: 0;}
     }
 
     h3 {
-        font-family: 'Arvo';
+        font-family: 'Open Sans';
         color: 000;
         font-size: 25px;
         font-weight: 300;
@@ -476,3 +476,67 @@ textarea {
     -moz-transition: background .5s;
     }
 }
+
+.resume-page {
+    h1 {
+        font: {
+            size: 20px;
+        }
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+    }
+
+    h2 {
+        color: $green;
+        font: {
+            size: 24px;
+        }
+    }
+    h3 {
+        color: $gray;
+        font: {
+            style: italic;
+            size: 14px;
+        }
+        line-height: 20px;
+        margin: 0;
+        margin-bottom: 3px;
+    }
+    p {
+        font: {
+            size: 14px;
+        }
+        line-height: 25px;
+    }
+
+    .left {
+        width: 40%;
+    }
+    .right {
+        width: 40%;
+    }
+
+    li {
+        list-style: square;
+        list-style-position:inside;
+        font-size: 14px;
+        line-height: 23px;
+
+    }
+}
+
+.resume-description {
+    margin-bottom: 50px;
+}
+
+.resume-skills {
+    li {
+        font-size: 12px;
+    }
+}
+
+.resume-page {
+    margin-bottom: 100px;
+}
+
