@@ -14,10 +14,10 @@
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+# page "/path/to/file", :layout => false
 #
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
+# page "/path/to/file", :layout => :otherlayout
 #
 # A path which all have the same layout
 # with_layout :admin do
@@ -25,7 +25,7 @@
 # end
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
+# proxy "/this-page-has-no-template", "/template-file", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 ###
@@ -37,6 +37,7 @@
 
 # Reload the browser automatically whenever files change
  activate :livereload
+
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -50,6 +51,22 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'img'
+set(:nav_ordering, [
+    "artallnight",
+    "muse",
+    "little",
+    "offbeat"
+  ])
+
+set(:nav_title_map, {
+    "artallnight" => "Introduction",
+    "muse" => "The Console",
+    "little" => "The Controller",
+    "offbeat" => "The Operating System",
+
+  })
+
+
 
 # Build-specific configuration
 configure :build do
