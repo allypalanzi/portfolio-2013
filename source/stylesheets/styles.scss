@@ -466,10 +466,21 @@ textarea {
     img,canvas {
         border: 5px solid white;
         max-width: 100%;
+        
+        &.icon {
+            border: none;
+            text-align: center;
+        }
     }
-    .three-up {
+    .three-up-container {
         width: 25%;
         margin: 3%;
+        text-align: center;
+        display: inline-block;
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
     }
 }
 

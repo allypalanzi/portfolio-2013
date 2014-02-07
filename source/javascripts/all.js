@@ -31,7 +31,7 @@ $(document).bind('keydown',function(e){
       'off': 'mouseleave',  // event to stop animation
       'autoResize': false,  // canvas dimensions adapt to container
       'enable': true,
-      'circleColor': 'ff0000',
+      'circleColor': '22B573',
       'removeAnchor': true // sometimes writers link the GIF to itself, causing it to open in a new window.
     }, options);
 
@@ -54,10 +54,10 @@ $(document).bind('keydown',function(e){
 
       // text
       context.fillStyle = '#ffffff';
-      context.font = "15px 'Gotham SSm A', 'Gotham SSm B', sans-serif";
+      context.font = "15px 'Open Sans'";
       context.textAlign = 'center';
       context.textBaseline = 'middle';
-      context.fillText("GIF", x, y);
+      context.fillText("PLAY", x, y);
     };
 
     return this.each(function() {
