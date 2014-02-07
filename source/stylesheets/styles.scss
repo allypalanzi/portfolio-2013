@@ -463,6 +463,8 @@ textarea {
 }
 .project-image {
     width: 100%;
+    text-align: center;
+    background: #fff;
     img,canvas {
         border: 5px solid white;
         max-width: 100%;
@@ -471,6 +473,18 @@ textarea {
             border: none;
             text-align: center;
         }
+
+   
+    }
+         &.no-white-bg {
+            background: none;
+        }
+
+    .megabus {
+        margin: 0 auto;
+        text-align: center;
+        width: 40%;
+        padding: 100px;
     }
     .three-up-container {
         width: 25%;
