@@ -463,9 +463,9 @@ textarea {
 }
 .project-image {
     width: 100%;
-    img {
+    img,canvas {
         border: 5px solid white;
-        width: 97%;
+        max-width: 100%;
     }
     .three-up {
         width: 25%;
@@ -473,19 +473,35 @@ textarea {
     }
 }
 
+em {
+    font-style: italic;
+}
 
-    strong {
-       color: $green;
-       font-weight: 700;
-    }
-.role, .team {
+.problem {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-style: italic;
+    p {
+    font-size: 18px;}
+}
+    
+.role-title {
+    vertical-align: top;
+    margin-right: 5px;
+    color: $green;
+    font-weight: 700;
+}
+
+
+.role {
     font-size: 14px;
-    margin-bottom: 5px;
+    display: inline-block;
+    li {
+        margin-bottom: 10px;
+    }
+    margin-bottom: 15px;
 }
 
-.team {
-    margin-bottom: 40px;
-}
 
 .live {
     display: inline-block;
