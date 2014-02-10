@@ -464,21 +464,25 @@ textarea {
 .project-image {
     width: 100%;
     text-align: center;
+    border: 5px solid white;
     background: #fff;
+
     img,canvas {
-        border: 5px solid white;
         max-width: 100%;
-        
-        &.icon {
-            border: none;
-            text-align: center;
-        }
 
    
     }
-         &.no-white {
-            background: none;
+     &.no-white {
+        background: none;
+        border: none;
+        img, canvas {
+            border: 5px solid #fff;
+        &.icon {
+            border: none;
+            text-align: center;
+            }
         }
+    }
 
     .megabus {
         margin: 0 auto;
