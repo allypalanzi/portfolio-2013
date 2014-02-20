@@ -156,7 +156,7 @@ to  {opacity: 0;}
         font-size:  40px;
         line-height: 60px;
         font-weight: 300;
-    @media(max-width: 400px) {
+        @media(max-width: 400px) {
         font-size: 30px
         }
 
@@ -188,6 +188,7 @@ to  {opacity: 0;}
             color: $green;
             margin-bottom: 30px;
             font-family: 'Oswald';
+            line-height: 45px;
         }
     }
 
@@ -250,13 +251,14 @@ to  {opacity: 0;}
 // #Body
 // ================================================== 
     .wrapper {
-        width: 95%;
+        width: 85%;
         max-width: 1000px;
         margin: 0px auto;
         margin-top: 2%;
 
         @media(max-width: 590px) {
             max-width: 320px;
+            width: 80%;
         }
     }
 
