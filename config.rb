@@ -24,64 +24,23 @@
 #   page "/admin/*"
 # end
 
-# Proxy pages (http://middlemanapp.com/dynamic-pages/)
-# proxy "/this-page-has-no-template", "/template-file", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
 
-###
-# Helpers
-###
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
-# Reload the browser automatically whenever files change
- activate :livereload
-
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+activate :livereload
 
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
 
 set :images_dir, 'img'
-set(:nav_ordering, [
-    "artallnight",
-    "muse",
-    "little",
-    "offbeat"
-  ])
 
-set(:nav_title_map, {
-    "artallnight" => "Introduction",
-    "muse" => "The Console",
-    "little" => "The Controller",
-    "offbeat" => "The Operating System",
-
-  })
+page "/projects/*", :layout => "project"
 
 
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
   activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  activate :minify_javascript
+  activate :asset_hash
+  activate :relative_assets
 end

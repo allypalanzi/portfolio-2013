@@ -25,7 +25,7 @@
   <title>Ally Palanzi's Portfolio</title>
 
   <link href="stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css" />
+  <%= stylesheet_link_tag "styles" %>
 </head>
 
 <body class="<%= page_classes %>
@@ -56,5 +56,4 @@
 </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <%= javascript_include_tag  "all" %>
-  <%= partial 'partials/js' %>
 </html>
