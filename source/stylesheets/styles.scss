@@ -258,7 +258,7 @@ to  {opacity: 0;}
 
         @media(max-width: 590px) {
             max-width: 320px;
-            width: 80%;
+            width: 90%;
         }
     }
 
@@ -323,7 +323,7 @@ to  {opacity: 0;}
     max-width: 800px;
 }
 
-#icons,#dribbble,#myPhotos {
+.portfolio,#dribbble,#myPhotos {
     overflow: hidden;
     li {
         vertical-align: top;
@@ -331,34 +331,38 @@ to  {opacity: 0;}
         border: 5px solid white;
         float: left;
         margin: 0.7%;
-        max-height: 132px;
-        max-width: 176px;
-        min-width: 125px;
         width: 22%;
         animation:  fadein 0.5s;
         -moz-animation:  fadein 0.5s; /* Firefox */
         -webkit-animation:  fadein 0.5s; /* Safari and Chrome */
         -o-animation:  fadein 0.5s; /* Opera */
-            transition: opacity .5s;
-    -webkit-transition: opacity .5s;
-    -moz-transition: opacity .5s;
+        transition: opacity .5s;
+        -webkit-transition: opacity .5s;
+        -moz-transition: opacity .5s;
         overflow: hidden;
-        @media(max-width: 650px) {
-            margin: 0.5%;
-        }
+
         @media(max-width: 590px) {
-            margin: 2.5%;
+            width: 42%;
         }
         img {
-        &:hover {
-            opacity: .5;
-            transition: opacity .5s;
-    -webkit-transition: opacity .5s;
-    -moz-transition: opacity .5s;
+            &:hover {
+                opacity: .5;
+                transition: opacity .5s;
+                -webkit-transition: opacity .5s;
+                -moz-transition: opacity .5s;
+            }
+        }
+
+    }
+}
+
+.portfolio {
+    li {
+        width: 30%;
+        @media(max-width: 590px) {
+            width: 100%;
         }
     }
-
-}
 
 }
 
@@ -404,8 +408,6 @@ textarea {
 
 .thumbs {
     width: 100%;
-    max-width: 200px;
-    max-height: 150px;
     height: 100%;
     vertical-align: top;
     
@@ -501,6 +503,20 @@ textarea {
             font-size: 18px;
             margin-bottom: 30px;
         }
+    }
+}
+
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
