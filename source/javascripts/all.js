@@ -160,3 +160,5 @@ $(document).bind('keydown',function(e){
     });
   }
 })(jQuery)
+
+$('.gif').playGIF();
