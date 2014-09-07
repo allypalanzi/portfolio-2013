@@ -18,8 +18,8 @@
 
   <!-- Favicons
   ================================================== -->
-  <link rel="icon" 
-      type="image/png" 
+  <link rel="icon"
+      type="image/png"
       href="img/fav.png">
 
   <title>Ally Palanzi's Portfolio</title>
@@ -30,27 +30,9 @@
 
 <body class="<%= page_classes %>
   ">
-  <div class="navcont"></div>
-  <div class="wrapper">
-    <div class="wrapper-left">
-      <a href="index.html"><div class="allyicon"></div></a>
-    </div>
-    <div class="wrapper-right">
-      <div class="header">
-        <h1>
-          Hi! I'm
-          <a href="index.html">Ally Palanzi</a>.
-        </h1>
-        <h2>
-          I'm a
-          <a href="http://dribbble.com/allypalanzi" target="_blank">designer</a>
-          and
-          <a href="https://github.com/allypalanzi" target="_blank">front-end developer</a>
-          from Washington, DC. Currently a front-end developer for
-          <a href="http://voxmedia.com" target="_blank">Vox Media</a> and a co-host of the <a href="http://sassydc.github.io" target="_blank">DC Sass Meetup</a>.
-        </h2>
-      </div>
-      <%= yield %>
+    <%= partial 'partials/header' %>
+    <%= yield %>
+    <%= partial 'partials/footer' %>
     </div>
   </div>
 </body>
