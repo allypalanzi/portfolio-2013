@@ -400,6 +400,10 @@ to  {opacity: 0;}
     }
 }
 
+#myPhotos li {
+    max-height: 152px;
+}
+
 .portfolio {
     li {
         width: 30%;
