@@ -657,12 +657,11 @@ em {
     h3 {
         color: $gray;
         font: {
-            style: italic;
             size: 14px;
         }
-        line-height: 20px;
+        line-height: 25px;
         margin: 0;
-        margin-bottom: 3px;
+        margin-bottom: 10px;
     }
     p {
         font: {
@@ -672,30 +671,30 @@ em {
     }
 
     .left {
-        width: 45%;
+        width: 47%;
     }
     .right {
-        width: 45%;
+        width: 47%;
+    }
+
+    ul {
+        margin-left: 20px;
     }
 
     li {
         list-style: square;
-        list-style-position:inside;
+        list-style-position:outside;
         font-size: 14px;
         line-height: 23px;
+        margin-bottom: 8px;
 
     }
 }
 
 .resume-description {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-.resume-skills {
-    li {
-        font-size: 12px;
-    }
-}
 
 .resume-page {
     margin-bottom: 100px;
