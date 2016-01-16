@@ -1,46 +1,4 @@
 <script type="text/javascript">
-    (function(e){"use strict";e.jribbble={};var t=function(t,s){e.ajax({type:"GET",url:"http://api.dribbble.com"+t,data:s[1]||{},dataType:"jsonp",success:function(e){e===undefined?s[0]({error:!0}):s[0](e)}})},s={getShotById:"/shots/$/",getReboundsOfShot:"/shots/$/rebounds/",getShotsByList:"/shots/$/",getShotsByPlayerId:"/players/$/shots/",getShotsThatPlayerFollows:"/players/$/shots/following/",getPlayerById:"/players/$/",getPlayerFollowers:"/players/$/followers/",getPlayerFollowing:"/players/$/following/",getPlayerDraftees:"/players/$/draftees/",getCommentsOfShot:"/shots/$/comments/",getShotsThatPlayerLikes:"/players/$/shots/likes/"},o=function(e){return function(){var s=[].slice.call(arguments),o=e.replace("$",s.shift());t(o,s)}};for(var r in s)e.jribbble[r]=o(s[r])})(jQuery,window,document);
-
-    $(document).ready(function () {     
-        $.jribbble.getShotsByPlayerId('allypalanzi', function (playerShots) {
-            var html = [];
-        
-            $.each(playerShots.shots, function (i, shot) {
-                html.push('<li><a target="_blank" href="' + shot.url + '">');
-                html.push('<img class="thumbs" src="' + shot.image_teaser_url + '" ');
-                html.push('alt="' + shot.title + '"></a></li>');
-            });
-            html.push('<div class="clear"></div>');
-
-            $('#dribbble').html(html.join(''));
-        }, {page: 1, per_page: 4});
-    });
-
-    $(function(){
-        $('.submit').click(function(e){
-
-            // Stop the form actually posting
-            e.preventDefault();
-
-            // Send the request
-            $.post('contact.php', {
-                name: $('#name').val(),
-                email: $('#email').val(),
-                subject: $('#subject').val(),
-                message: $('#message').val(),
-
-            }, function(d){
-                console.log(d);
-                // Here we handle the response from the script
-                // We are just going to alert the result for now
-                alert(d);
-                
-            });
-        });
-    });
-
-
-    
     function jsonFlickrFeed(json) {
         // Assign to a global variable
         window.jsonFromFlickr = json;
